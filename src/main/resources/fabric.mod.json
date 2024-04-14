@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "triplesense",
+  "version": "${version}",
+  "name": "TripleSense",
+  "description": "",
+  "authors": [
+    "c_arrot_"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "me.carrot0322.triplesense.TripleSense",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "accessWidener" : "triplesense.accesswidener",
+  "mixins": [
+    "triplesense.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.9",
+    "minecraft": "~1.20.4",
+    "java": ">=17",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.9.23"
+  }
+}

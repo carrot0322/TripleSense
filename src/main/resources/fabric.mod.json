@@ -9,11 +9,11 @@
   ],
   "environment": "client",
   "entrypoints": {
+    "client": [
+      "me.carrot0322.triplesense.TripleSense"
+    ],
     "main": [
-      {
-        "value": "me.carrot0322.triplesense.TripleSense",
-        "adapter": "kotlin"
-      }
+      "me.carrot0322.triplesense.TripleSense"
     ]
   },
   "accessWidener" : "triplesense.accesswidener",

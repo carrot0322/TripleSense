@@ -9,7 +9,7 @@ import static me.carrot0322.triplesense.util.etc.Util.mc;
 
 public class ChatUtil {
     public static String MsgPrefix(){
-        return Formatting.WHITE + "[" + Formatting.GREEN + TripleSense.NAME + Formatting.WHITE + "]" + Formatting.RESET;
+        return Formatting.WHITE + "[" + Formatting.GOLD + TripleSense.NAME + Formatting.WHITE + "]" + Formatting.RESET;
     }
 
     public static void sendInfo(String message) {

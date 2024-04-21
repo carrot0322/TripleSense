@@ -4,19 +4,20 @@
   "package": "me.carrot0322.triplesense.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "MixinClientConnection",
+    "IClientPlayerEntity",
     "IExplosionS2CPacket",
     "ISPacketEntityVelocity",
-    "IClientPlayerEntity"
+    "MixinClientConnection"
   ],
   "client": [
+    "MixinChatInputSuggestor",
     "MixinClientPlayerEntity",
     "MixinClientPlayNetworkHandler",
     "MixinInGameHud",
     "MixinKeyboard",
     "MixinRenderTickCounter",
-    "MixinWorldRenderer",
-    "MixinKeyboard"
+    "MixinScreen",
+    "MixinWorldRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

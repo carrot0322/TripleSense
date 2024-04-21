@@ -81,6 +81,12 @@ public class ModuleManager implements Jsonable, Util {
         }
     }
 
+    public void toggleModule(Class<Module> clazz){
+        Module module = this.getModuleByClass(clazz);
+        if(module != null)
+            module.setEnabled(!module.isEnabled());
+    }
+
     public void enableModule(String name) {
         Module module = this.getModuleByName(name);
         if (module != null) {
@@ -93,6 +99,12 @@ public class ModuleManager implements Jsonable, Util {
         if (module != null) {
             module.disable();
         }
+    }
+
+    public void toggleModule(String name){
+        Module module = this.getModuleByName(name);
+        if(module != null)
+            module.setEnabled(!module.isEnabled());
     }
 
     public boolean isModuleEnabled(String name) {

@@ -3,6 +3,7 @@ package me.carrot0322.triplesense.util.render;
 import com.mojang.blaze3d.systems.RenderSystem;
 import me.carrot0322.triplesense.util.etc.Util;
 import net.minecraft.client.render.*;
+import net.minecraft.client.texture.Scaling;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -218,5 +219,4 @@ public class RenderUtil implements Util {
         RenderSystem.depthMask(true);
         RenderSystem.enableCull();
     }
-
 }

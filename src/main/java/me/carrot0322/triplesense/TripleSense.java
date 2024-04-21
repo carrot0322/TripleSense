@@ -6,12 +6,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class TripleSense implements ModInitializer, ClientModInitializer {
-    public static final String NAME = "TripleSense";
+    public static final String NAME = "TripleSense++";
     public static final String VERSION = "1.0.0-dev";
 
     public static float TIMER = 1f;
 
-    public static final Logger LOGGER = LogManager.getLogger("TripleSense");
+    public static final Logger LOGGER = LogManager.getLogger(NAME);
     public static me.carrot0322.triplesense.manager.ServerManager serverManager;
     public static me.carrot0322.triplesense.manager.ColorManager colorManager;
     public static me.carrot0322.triplesense.manager.RotationManager rotationManager;
@@ -19,9 +19,9 @@ public class TripleSense implements ModInitializer, ClientModInitializer {
     public static me.carrot0322.triplesense.manager.HoleManager holeManager;
     public static me.carrot0322.triplesense.manager.EventManager eventManager;
     public static me.carrot0322.triplesense.manager.SpeedManager speedManager;
-    public static me.carrot0322.triplesense.manager.CommandManager commandManager;
     public static me.carrot0322.triplesense.manager.FriendManager friendManager;
     public static me.carrot0322.triplesense.manager.ModuleManager moduleManager;
+    public static me.carrot0322.triplesense.manager.CommandManager commandManager;
     public static me.carrot0322.triplesense.manager.ConfigManager configManager;
     public static me.carrot0322.triplesense.manager.PlayerManager playerManager;
 
@@ -33,8 +33,8 @@ public class TripleSense implements ModInitializer, ClientModInitializer {
         positionManager = new me.carrot0322.triplesense.manager.PositionManager();
         friendManager = new me.carrot0322.triplesense.manager.FriendManager();
         colorManager = new me.carrot0322.triplesense.manager.ColorManager();
-        commandManager = new me.carrot0322.triplesense.manager.CommandManager();
         moduleManager = new me.carrot0322.triplesense.manager.ModuleManager();
+        commandManager = new me.carrot0322.triplesense.manager.CommandManager();
         speedManager = new me.carrot0322.triplesense.manager.SpeedManager();
         holeManager = new me.carrot0322.triplesense.manager.HoleManager();
         playerManager = new me.carrot0322.triplesense.manager.PlayerManager();

@@ -2,7 +2,7 @@ package me.carrot0322.triplesense.manager;
 
 import com.mojang.brigadier.CommandDispatcher;
 import me.carrot0322.triplesense.features.commands.Command;
-//import me.carrot0322.triplesense.features.commands.impl.*;
+import me.carrot0322.triplesense.features.commands.impl.*;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientCommandSource;
 import net.minecraft.command.CommandSource;
@@ -20,7 +20,9 @@ public class CommandManager {
     private final List<Command> commands = new ArrayList<>();
 
     public CommandManager() {
-        //add(new VClip());
+        add(new BindCommand());
+        add(new FriendCommand());
+        add(new ToggleCommand());
     }
 
     private void add(@NotNull Command command) {

@@ -2,10 +2,11 @@
   "schemaVersion": 1,
   "id": "triplesense",
   "version": "${version}",
-  "name": "TripleSense",
+  "name": "TripleSense++",
   "description": "",
   "authors": [
-    "c_arrot_"
+    "c_arrot_",
+    "Triple3533"
   ],
   "environment": "client",
   "entrypoints": {

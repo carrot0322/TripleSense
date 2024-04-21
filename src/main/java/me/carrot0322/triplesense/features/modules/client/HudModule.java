@@ -5,8 +5,6 @@ import me.carrot0322.triplesense.event.impl.Render2DEvent;
 import me.carrot0322.triplesense.features.modules.Module;
 import me.carrot0322.triplesense.features.settings.Setting;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.Element;
-import org.lwjgl.opengl.GL11;
 
 import java.util.Comparator;
 import java.util.List;
@@ -26,7 +24,7 @@ public class HudModule extends Module {
         if (Watermark.getValue()) {
             event.getContext().drawTextWithShadow(
                     mc.textRenderer,
-                    TripleSense.NAME + "-" + TripleSense.VERSION,
+                    TripleSense.NAME + " " + TripleSense.VERSION,
                     2, 2,
                     -1
             );
@@ -57,41 +55,8 @@ public class HudModule extends Module {
                         y,
                         -1
                 );
-
-                GL11.glPushMatrix();
-                GL11.glScalef(1.0f, 1.0f, 1.0f);
-                GL11.glTranslated(mc.getWindow().getScaledWidth() - stringWidth -2, y, 0.0);
-
-                try{
-
-                } catch (Exception ex){
-                    TripleSense.LOGGER.error("Something went wrong while drawing Arraylist element in HUD.");
-                }
-
-                GL11.glPopMatrix();
-
                 y += yOffset;
             }
-        }
-
-        for (int i = 0; i == elements; i++) {
-            try {
-                if (element.getInfo().isBlur()) {
-                    element.drawBoarderBlur();
-                }
-
-                element.setBorder(element.drawElement(partialTicks));
-
-                if (designer) {
-                    if (element.getBorder() != null) {
-                        element.getBorder().draw();
-                    }
-                }
-            } catch (Exception ex) {
-                TripleSense.LOGGER.error();
-            }
-
-            GL11.glPopMatrix();
         }
     }
 }
